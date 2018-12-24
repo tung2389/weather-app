@@ -1,0 +1,294 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.weather 
+{
+  padding: 15px 20px 25px 20px;
+  height: 100px;
+  max-width: 400px;
+  margin: 20px auto;
+  background-color: aqua;
+  transition: 0,5s;
+}
+.weather:hover{
+  box-shadow: 0px 10px 18px black
+}
+.background1{
+  width: 100%;
+  height: 100%;
+  /* position:fixed; */
+  background-color: white;
+}
+.sp1
+{
+  margin: auto;
+}
+.w_img
+{
+  float: right;
+}
+@keyframes float-up {
+  0% {
+      opacity: 0;
+      top: 4rem;
+  }
+  100% {
+      opacity: 1;
+      top: 0;
+  }
+}
+
+.float-up {
+  opacity: 0;
+  position: relative;
+  animation-name: float-up;
+  animation-duration: 0.45s;
+  animation-fill-mode: forwards;
+}
+/* position fixed and margin auto cannot be used in a same place. They will disable each other.*/
+.display_box{
+  position: fixed;
+  left: 50%; /*move the top left point of block to the center*/
+  top: 50%;  /*move the top left point of block to the center*/
+  transform: translate(-50%, -50%); /*move the center of the block to center*/
+  background-color: white;
+}
+.open_gradually{
+  position: fixed;
+  animation-name: open_gradually;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+@keyframes open_gradually{
+  0%{
+    width:  1000px;
+    height: 1px;
+  }
+  50%{
+    width: 1000px;
+    height: 1px;
+  }
+  100%{
+    width: 1000px;
+    height: 600px;
+  }
+}
+.slow_down{
+  animation-name: slow_down;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+.slow_down_btn
+{
+  animation-name: slow_down_btn;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+@keyframes slow_down{
+  0%{
+    opacity: 0;
+  }
+  75%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+@keyframes slow_down_btn{
+  0%{
+    opacity: 0;
+  }
+  75%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+.modal {
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+.center_content {
+  background-color: #fefefe;
+  position: fixed;
+  left: 50%; /*move the top left point of block to the center*/
+  top: 50%;  /*move the top left point of block to the center*/
+  transform: translate(-50%, -50%); /*move the center of the block to center*/
+}
+.exit_button{
+  position: absolute;
+  top: 0%;
+  left: 100%;
+  width: 30px;
+  height: 30px;
+  transform: translate(-100%,0%);
+  -webkit-transform: translate(-100%,0%);
+  background-color: white;
+  color: rgba(0,0,0,.87);
+  border: none;
+}
+.exit_button:hover{
+  color: black;
+  background-color: gray;
+}
+.show_more_btn{
+  position: absolute;
+  left: 60%;
+  width: 80px;
+  height: 40px;
+  background-color: rgb(255,143,0);
+  border: none;
+  color: white;
+  transition: 0.5s;
+}
+.show_more_btn:hover{
+  background-color: rgb(255, 167, 51);
+  cursor: pointer;
+}
+.close_gradually{
+  position: fixed;
+  animation-name: close_gradually;
+  animation-duration: 0.6s;
+  animation-fill-mode: forwards;
+}
+@keyframes close_gradually{
+  0%{
+    width:  1000px;
+    height: 600px;
+    opacity: 1;
+  }
+  100%{
+    width: 400px;
+    height: 200px;
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+.none_display{
+  visibility: hidden;
+}
+.btn_get_location{
+  position: fixed;
+  width: 200px;
+  height: 40px;
+  background-color: white;
+  border-color: blue;
+  transition: 0.5s;
+}
+.btn_get_location:hover{
+  color: white;
+  background-color: blue;
+}
+.btn_page1{
+  top: 10%;
+  width: 80px;
+  height: 40px;
+  position: fixed;
+  background-color: white;
+  border-color: blue white blue blue;
+  border-right-width: 0px;
+}
+.btn_page2{
+  top: 10%;
+  left: 80px;
+  width: 80px;
+  height: 40px;
+  position: fixed;
+  background-color: white;
+  border-color: blue;
+}
+.btn_page1_change
+{
+  top: 10%;
+  width: 80px;
+  height: 40px;
+  position: fixed;
+  background-color: blue;
+  color: white;
+  border: none;
+}
+.btn_page2_change
+{
+  top: 10%;
+  left: 80px;
+  width: 80px;
+  height: 40px;
+  position: fixed;
+  background-color: blue;
+  color: white;
+  border: none;
+}
+.source_of_sponsor{
+  position: fixed;
+  top: 90%;
+  left: 50%; 
+  transform: translate(-50%, 0%); 
+}
+.below_input{
+  position: fixed;
+  left: 50%; 
+  transform: translate(-50%, 0%); 
+}
+.search_box{
+  position: fixed;
+  top: 20%;
+  left: 50%; 
+  transform: translate(-50%, 0%); 
+  width: 600px;
+  height: 450px;
+  border-color: aqua;
+  border-style: solid;
+  overflow: scroll;
+}
+.sub_btn{
+  background-color: white;
+  border-style: none;
+  width: 600px;
+  height: 20px;
+  position: fixed;
+  left: 50%; 
+  transform: translate(-50%, 0%); 
+}
+.sub_btn:hover{
+  background-color: #a6a6a6;
+}
