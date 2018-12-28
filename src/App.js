@@ -251,7 +251,7 @@ class App extends React.Component {
   }
   Change_page1()
   {
-    this.setState({btn1:"btn_page1_change",btn2:"btn_page2",search_page:0});
+    this.setState({btn1:"btn_page1_change",btn2:"btn_page2",search_page:0,status:"none_display"});
   }
   Change_page2()
   {
@@ -264,7 +264,7 @@ class App extends React.Component {
     (
     (!this.state.search_page)
     ?
-      <div className = "background1">
+      <div className = "background1 float-up">
       <button className = "btn_get_location" onClick = {this.GetLocation}>Weather in your current location</button>
       <button onClick = {this.Change_page1} className = {this.state.btn1}>Weather</button>
       <button onClick = {this.Change_page2} className = {this.state.btn2}>Search city</button>
@@ -289,7 +289,7 @@ class App extends React.Component {
       </div>
     :
     (
-    <div>
+    <div className = "float-up">
     <button className = "btn_get_location" onClick = {this.GetLocation}>Weather in your current location</button>
     <button onClick = {this.Change_page1} className = {this.state.btn1}>Weather</button>
     <button onClick = {this.Change_page2} className = {this.state.btn2}>Search city</button>
